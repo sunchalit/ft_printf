@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utility.c                                          :+:      :+:    :+:   */
+/*   print_u.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/13 11:52:36 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 11:33:39 by cnarkcha         ###   ########.fr       */
+/*   Created: 2023/05/20 12:50:59 by cnarkcha          #+#    #+#             */
+/*   Updated: 2023/05/20 15:09:54 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	printchar(int c)
+int	unsigned_len(unsigned int num)
 {
-	write(1, &c, 1);
-	return (1);
+	int	len;
+
+	len = 0;
+	if (num == 0)
+		return (1);
+	while (num != 0)
+	{
+		len++;
+		num = (num / 10);
+	}
+	return (len);
 }
 
-void	print_null(char *str)
+void	sort_u(unsigned int num)
 {
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		write(1, &str[index], 1);
-		index++;
-	}
+	if (num >= 10)
+		sort_u(num / 10);
+	printchar((numi % 10) + 48);
 }
 
-int	printstr(char *str)
+int	print_u(unsigned int num)
 {
-	int	index;
-
-	index = 0;
-	while (str[index] != '\0')
-	{
-		write(1, &str[index], 1);
-		index++;
-	}
-	return (index);
+	int	len;	
+	sort_u(num);
+	len = unsigned_len(num);
+	return (len);
 }
