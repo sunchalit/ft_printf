@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 11:21:42 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 15:34:48 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:30:23 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_itoa(int n);
 
 void	print_null(char *str);
 void	sort_hex(unsigned int decimal, const char format);
-void	sort_u(unsigned int	num);
+void	sort_u(unsigned int num);
 void	sort_p(uintptr_t pointer);
 
 int		print_c(int c);

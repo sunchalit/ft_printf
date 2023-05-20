@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:50:59 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 15:09:54 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:29:12 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void	sort_u(unsigned int num)
 
 int	print_u(unsigned int num)
 {
-	int	len;	
+	int	len;
+
 	sort_u(num);
 	len = unsigned_len(num);
 	return (len);
