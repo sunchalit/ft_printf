@@ -6,9 +6,11 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 17:15:52 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 13:29:43 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:46:36 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_formats(va_list args, const char format)
 {
@@ -16,7 +18,7 @@ int	ft_formats(va_list args, const char format)
 
 	length = 0;
 	if (format == 'c')
-		length = length + printchar(va_arg(args, int));
+		length = length + putchar(va_arg(args, int));
 	else if (format == 's')
 		length = length + print_s(va_arg(args, char *));
 	else if (format == 'p')
@@ -26,8 +28,8 @@ int	ft_formats(va_list args, const char format)
 	else if (format == 'u')
 		length = length + print_u(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		length += print_x(va_arg(args, unsigned int), const char format);
+		length += print_x(va_arg(args, unsigned int), format);
 	else if (format == '%')
-		length = length + printchar(va_arg(args, int));
+		length = length + putchar(va_arg(args, int));
 	return (length);
 }

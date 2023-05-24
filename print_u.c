@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:50:59 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 16:29:12 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:50:01 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	sort_u(unsigned int num)
 {
 	if (num >= 10)
 		sort_u(num / 10);
-	printchar((numi % 10) + 48);
+	putchar((num % 10) + 48);
 }
 
 int	print_u(unsigned int num)

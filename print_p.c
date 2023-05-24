@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 14:40:09 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 16:26:18 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:49:17 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	sort_p(uintptr_t pointer)
 		sort_p(pointer % 16);
 	}
 	else if (pointer <= 9)
-		printchar(pointer + 48);
+		putchar(pointer + 48);
 	else if (pointer >= 10 && pointer <= 15)
 	{
-		printchar(pointer + 87);
+		putchar(pointer + 87);
 	}
 }
 
@@ -48,7 +48,7 @@ int	print_p(void *ptr)
 	pointer = (uintptr_t)ptr;
 	write(1, "0x", 2);
 	if (pointer == 0)
-		printchar('0');
+		putchar('0');
 	else
 	{
 		sort_p(pointer);

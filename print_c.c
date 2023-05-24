@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 12:12:06 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/13 12:55:25 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:47:43 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int	print_c(int c)
 	int	length;
 
 	length = 0;
-	length = printchar(c);
+	length = putchar(c);
 	return (length);
 }

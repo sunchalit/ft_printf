@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 10:52:59 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 15:07:57 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:51:24 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ void	sort_hex(unsigned int decimal, const char format)
 		sort_hex(decimal % 16, format);
 	}
 	else if (decimal <= 9)
-		printchar(decimal + 48);
+		putchar(decimal + 48);
 	else if (decimal >= 10 && decimal <= 15)
 	{
 		if (format == 'x')
-			printchar(decimal + 87);
+			putchar(decimal + 87);
 		else if (format == 'X')
-			printchar(decimal + 55);
+			putchar(decimal + 55);
 	}
 }
 

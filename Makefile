@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/29 11:26:17 by cnarkcha          #+#    #+#              #
-#    Updated: 2023/05/20 17:15:11 by cnarkcha         ###   ########.fr        #
+#    Created: 2023/05/24 17:31:54 by cnarkcha          #+#    #+#              #
+#    Updated: 2023/05/24 17:32:02 by cnarkcha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,24 +14,24 @@ NAME = libftprintf.a
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -c
+CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c ft_formats.c \ 
-	   print_c.c print_s.c print_p.c print_di.c print_u.c print_x.c
+SRCS = ft_printf.c ft_formats.c \
+       print_c.c print_s.c print_p.c print_di.c print_u.c print_x.c \
+       utility_1.c utility_2.c
 
-OBJS = $(SRCS: .c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(FLAGS) $(SRCS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS)
+		ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+		rm -f $(OBJS)
 
-fclean:
-	rm -f $(NAME)
+fclean: clean
+		rm -f $(NAME)
 
 re: fclean all
 

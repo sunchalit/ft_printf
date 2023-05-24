@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 11:21:42 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/20 16:30:23 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 17:58:17 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
-int		printchar(int c);
+int		ft_formats(va_list args, const char format);
+int		putchar(int c);
 int		printstr(char *str);
 int		find_size(int n);
 int		hex_len(unsigned int decimal);
