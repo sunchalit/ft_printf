@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:55:48 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:46:01 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/27 12:37:11 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -25,6 +25,7 @@ int	ft_printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			length = length + ft_formats(args, format[index + 1]);
+			index++;
 		}
 		else
 		{

@@ -6,7 +6,7 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 14:40:09 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:49:17 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/27 13:01:30 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,14 @@ int	print_p(void *ptr)
 	int			len;
 
 	pointer = (uintptr_t)ptr;
-	write(1, "0x", 2);
 	if (pointer == 0)
-		putchar('0');
+	{
+		write(1, "0x0", 3);
+		return (3);
+	}
 	else
 	{
+		write(1, "0x", 2);
 		sort_p(pointer);
 	}
 	len = pointer_len(pointer);

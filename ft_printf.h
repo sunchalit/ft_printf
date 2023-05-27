@@ -6,12 +6,13 @@
 /*   By: cnarkcha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 11:21:42 by cnarkcha          #+#    #+#             */
-/*   Updated: 2023/05/24 17:58:17 by cnarkcha         ###   ########.fr       */
+/*   Updated: 2023/05/24 18:21:52 by cnarkcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
 # include <stdint.h>
